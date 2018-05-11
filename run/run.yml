@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: no
+  pre_tasks:
+    - name: Update
+      raw: sudo apt-get update
+    - name: Install python
+      raw: sudo apt-get install -y python
+
+- hosts: all
+  become: yes
+  roles:
+    - ansible-elasticsearchupgrade

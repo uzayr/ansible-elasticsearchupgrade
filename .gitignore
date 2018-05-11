@@ -1,0 +1,4 @@
+.kitchen/
+*.log
+*.retry
+.idea/
